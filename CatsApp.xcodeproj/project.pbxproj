@@ -14,7 +14,8 @@
 		46D03E002125F1F800F09E2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46D03DFE2125F1F800F09E2B /* LaunchScreen.storyboard */; };
 		46D03E032125F1F800F09E2B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D03E022125F1F800F09E2B /* main.m */; };
 		46D03E0B2125F3C000F09E2B /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D03E0A2125F3C000F09E2B /* NetworkManager.m */; };
-		46D03E0E2125FDEC00F09E2B /* Cats.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D03E0D2125FDEC00F09E2B /* Cats.m */; };
+		46D03E0E2125FDEC00F09E2B /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D03E0D2125FDEC00F09E2B /* Photo.m */; };
+		46D03E112126147400F09E2B /* PhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D03E102126147400F09E2B /* PhotoCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,8 +31,10 @@
 		46D03E022125F1F800F09E2B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		46D03E092125F3C000F09E2B /* NetworkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
 		46D03E0A2125F3C000F09E2B /* NetworkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
-		46D03E0C2125FDEC00F09E2B /* Cats.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cats.h; sourceTree = "<group>"; };
-		46D03E0D2125FDEC00F09E2B /* Cats.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Cats.m; sourceTree = "<group>"; };
+		46D03E0C2125FDEC00F09E2B /* Photo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
+		46D03E0D2125FDEC00F09E2B /* Photo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
+		46D03E0F2126147400F09E2B /* PhotoCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoCollectionViewCell.h; sourceTree = "<group>"; };
+		46D03E102126147400F09E2B /* PhotoCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,14 +71,16 @@
 				46D03DF42125F1F500F09E2B /* AppDelegate.m */,
 				46D03DF62125F1F500F09E2B /* ViewController.h */,
 				46D03DF72125F1F500F09E2B /* ViewController.m */,
+				46D03E0F2126147400F09E2B /* PhotoCollectionViewCell.h */,
+				46D03E102126147400F09E2B /* PhotoCollectionViewCell.m */,
 				46D03DF92125F1F500F09E2B /* Main.storyboard */,
 				46D03DFC2125F1F800F09E2B /* Assets.xcassets */,
 				46D03DFE2125F1F800F09E2B /* LaunchScreen.storyboard */,
 				46D03E012125F1F800F09E2B /* Info.plist */,
 				46D03E092125F3C000F09E2B /* NetworkManager.h */,
 				46D03E0A2125F3C000F09E2B /* NetworkManager.m */,
-				46D03E0C2125FDEC00F09E2B /* Cats.h */,
-				46D03E0D2125FDEC00F09E2B /* Cats.m */,
+				46D03E0C2125FDEC00F09E2B /* Photo.h */,
+				46D03E0D2125FDEC00F09E2B /* Photo.m */,
 				46D03E022125F1F800F09E2B /* main.m */,
 			);
 			path = CatsApp;
@@ -151,7 +156,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46D03E0E2125FDEC00F09E2B /* Cats.m in Sources */,
+				46D03E0E2125FDEC00F09E2B /* Photo.m in Sources */,
+				46D03E112126147400F09E2B /* PhotoCollectionViewCell.m in Sources */,
 				46D03E0B2125F3C000F09E2B /* NetworkManager.m in Sources */,
 				46D03DF82125F1F500F09E2B /* ViewController.m in Sources */,
 				46D03E032125F1F800F09E2B /* main.m in Sources */,

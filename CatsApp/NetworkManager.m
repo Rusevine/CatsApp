@@ -7,10 +7,11 @@
 //
 
 #import "NetworkManager.h"
+#import "Photo.h"
 
 @implementation NetworkManager
 
-+(void)getCats{
++(void)getPhotos:(void (^)(NSArray *))completion{
     NSURL *url = [[NSURL alloc] initWithString:@"https://api.imgur.com/3/gallery/search/?q=cats"];
     
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
@@ -42,13 +43,13 @@
         }
         
   
-//        NSLog(@"Meta data: %@", info[@"meta"]);
-//        NSMutableArray *reps = [@[] mutableCopy];
-//        for (NSDictionary *rep in info[@"objects"]) {
-//            [reps addObject:[[Rep alloc] initWithInfo:rep]];
-//        }
-//
-//        completion(reps);
+        NSLog(@"Title:%@ Url:%@", info[@"data"][0][@"title"], info[@"data"][0][@"images"][0][@"link"]);
+        NSMutableArray *photos = [@[] mutableCopy];
+        for (NSDictionary *data in info[@"data"]) {
+            Photo *photo = [[Photo alloc] initWithData:data];
+            [photos addObject:photo];
+        }
+       completion(photos);
     }];
     NSLog(@"Created task");
     [task resume];

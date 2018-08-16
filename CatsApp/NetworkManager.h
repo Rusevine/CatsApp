@@ -10,5 +10,5 @@
 
 @interface NetworkManager : NSObject
 
-+(void)getCats;
++(void)getPhotos:(void (^)(NSArray *))completion;
 @end
