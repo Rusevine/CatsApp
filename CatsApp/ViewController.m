@@ -28,7 +28,6 @@
            [self.collectionView reloadData];
         }];
     }];
-    
 }
 
 
@@ -36,19 +35,11 @@
     [super didReceiveMemoryWarning];
 }
 
-//- (void)viewWillLayoutSubviews {
-//    UICollectionViewFlowLayout *layout = (UICollectionViewFlowLayout *)self.collectionView.collectionViewLayout;
-//    layout.sectionHeadersPinToVisibleBounds = YES;
-//    CGSize size = CGSizeMake(self.collectionView.bounds.size.width/2, self.collectionView.bounds.size.width/2);
-//    layout.itemSize = size;
-//}
-
 
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
     PhotoCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
     cell.photo = self.photos[indexPath.row];
-    
     return cell;
 }
 

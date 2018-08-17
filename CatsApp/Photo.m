@@ -27,25 +27,13 @@
 }
 
 -(void)setupImage{
-    NSString *urlString = [NSString stringWithFormat:@"%@",self.data[@"images"][0][@"link"]];
     _title = self.data[@"title"];
+    NSString *urlString = [NSString stringWithFormat:@"%@",self.data[@"images"][0][@"link"]];
     _url = [[NSURL alloc] initWithString:urlString];
- 
-    if(self.image == nil){
-        NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
-        NSURLSession *session = [NSURLSession sessionWithConfiguration:configuration];
-        
-        NSURLSessionDownloadTask *downloadTask = [session downloadTaskWithURL:self.url completionHandler:^(NSURL * _Nullable location, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-            NSData *data = [NSData dataWithContentsOfURL:location];
-            UIImage *image = [UIImage imageWithData:data];
-            
-            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-                self.image = image;
-            }];
-   
-        }];
-        [downloadTask resume];
-    }
+    NSData *data = [NSData dataWithContentsOfURL:self.url];
+    UIImage *image = [UIImage imageWithData:data];
+    self.image = image;
+
 }
 
 @end

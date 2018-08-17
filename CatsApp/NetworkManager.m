@@ -46,8 +46,7 @@
         NSLog(@"Title:%@ Url:%@", info[@"data"][0][@"title"], info[@"data"][0][@"images"][0][@"link"]);
         NSMutableArray *photos = [@[] mutableCopy];
         for (NSDictionary *data in info[@"data"]) {
-            Photo *photo = [[Photo alloc] initWithData:data];
-            [photos addObject:photo];
+            [photos addObject:[[Photo alloc] initWithData:data]];
         }
        completion(photos);
     }];
